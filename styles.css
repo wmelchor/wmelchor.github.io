@@ -1,0 +1,672 @@
+/* MAIN PAGE */
+* {
+    margin: 0;
+    padding: 0;
+    /* From google fonts */
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+#header{
+    height: 35vh;
+    width: 100%;
+    background-image: url(images/header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    padding: 5px 10%;
+}
+
+/* This is for to display everything relative to the center. For example, 2% 6% sets everything down and to the right a little*/
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*.logo{
+    width: 140px;
+} */
+
+/* Adjusts the logo a bit */
+nav img{
+    width: 200px;
+}
+
+/* This is to make the tabs display on the right side */
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+/* This is for the tabs at the right side corner side by side */
+.nav-links ul li{ 
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    margin: 10px 20px;
+}
+
+/* Change the how the text looks */
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* This will add the underline effect */
+.nav-links ul li::after{
+    content: '';
+    /* Width is 0% here to make it invisible, but it will be visible once we hover over 
+       it using the little block of code below */
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+
+/* This hides the icons that were taken from font awesome on desktop */
+nav .fa {
+    display: none;
+}
+/* Adjust page for mobile devices */
+@media(max-width: 700px){
+    .text-box h1{
+        /* Make it smaller */
+        font-size: 20px;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+    /* Make a side tab that needs to be opened to get to the menu options */
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200; /* Hides the menu */
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    /* Edits the icons */
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 30px;
+    }
+
+    /* Edit row section */
+    .row{
+        flex-direction: column;
+    }
+
+    .testimonials-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/* About section */
+
+/* Have the courses section centered rather than be in the top left corner */
+.courses{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#about{
+    padding: 80px 0px;
+}
+
+/* This changes the display of the row section from going down to being side by side, might change later... maybe rows of 3 */
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Make picture borders round */
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+/* Full width */
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* Courses section */
+
+/* Have the courses section centered rather than be in the top left corner */
+.courses{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Edit header text */
+.courses h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* Edit paragraph text */
+.courses-col p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+/* This changes the display of the row section from going down to being side by side, might change later... maybe rows of 3 */
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Change display of courses-col sections [with boxes], also try to add links to these things later...  */
+/*.courses-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    /* Hover transition 
+    transition: 0.5s;
+}
+
+.courses h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #000;
+}
+
+/* Have a little shadow effect when hovering over the boxes 
+.courses-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+} */
+
+
+/* Call to Action */
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/* Sub Header Across the pages */
+
+/* Set up the background */
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding: 10px 10%;
+}
+
+/* Move header text */
+.sub-header h1{
+    margin-top: 100px;
+    font-size: 36px;
+}
+/* ABOUT ME PAGE */
+
+/* Set up the background */
+
+/* Move header text */
+
+.about-me{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px
+}
+
+.about-col img{
+    width: 80%;
+}
+
+.about-col h1{
+    padding-top: 0;
+}
+
+.about-col p{
+    padding: 15px 0 25px;
+}
+
+/* The button becomes red */
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+
+/* The text becomes white */
+.red-btn:hover{
+    color: #fff
+}
+
+/* ----- Credentials ----- */
+
+#credentials{
+    padding: 30px 0;;
+}
+
+/* How will they be displayed */
+.credentials-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* The entirety of div will have the greyed background */
+.credentials-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+/* The icons will be larger */
+.credentials-list div i{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* The titles will be larger */
+.credentials-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* The learn more will be edited to be small and normal looking */
+.credentials-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Hover effect */
+.credentials-list div:hover{
+    background: #001aff;
+    transform: translateY(-10px);
+}
+
+#portfolio{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work p{
+    padding-top: 5px;
+}
+
+.work img{
+    width:  100%;
+    height: 250px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.dog img{
+    float: left;
+    width:  500px;
+    height: 800px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.dog:hover img{
+    transform: scale(1.1);
+}
+
+/* Unused
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #6570d6);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+*/
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+/* Contact */
+.contact-left{
+    flex-basis: 35%;
+}
+/* Move text stuff to the left a bit */
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #2840af;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn{
+    display: block;
+    margin: 40px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.btn.btn3{
+    display: inline-block;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* For the Project paragraph text */
+.work-list p{
+    margin-top: 10px;
+}
+
+/* Contact form message */
+#message{
+    color: #61b752;
+    margin-top: -30px;
+    display: block;
+}
+
+
+/* Courses page */
+
+.courses{
+    padding: 70px 12%;
+    text-align: center;
+    font-size: 18px;
+    /* Adds a line to the top of this section */
+    border-top: 6px solid #333;
+}
+
+.courses h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+/* This will put the questions in boxes */
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #777;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+/* This will hide the radio check bubbles */
+input[type="radio"]{
+    display: none;
+}
+
+/* This will hide the answers to the questions */
+.accordion .content{
+    background: #777;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+/* Display the answer once clicked, will hide others like radio buttons do */
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::before,
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}

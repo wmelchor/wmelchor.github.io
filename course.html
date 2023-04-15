@@ -1,0 +1,247 @@
+<html>
+    <head>
+        <meta name = "viewport" content = "with=device-width, initial-scale = 1.0">
+        <title> William Melchor-Guerra </title>
+        <!-- Connect this and the css file -->
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/c55f68d240.js" crossorigin="anonymous"></script>
+        <!-- From google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <!-- Used for the mobile side tab -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <a href="index.html"><img src="images/logo.png" class="logo"></a>
+                    <div class="nav-links" id="navLinks">
+                        <!-- From font awesome icons, clicking it will run hideMenu() -->
+                         <i class="fa fa-window-close-o" onclick="hideMenu()"></i>
+                          <ul>
+                              <li><a href="index.html">HOME</a></li>
+                              <li><a href="about.html">ABOUT</a></li>
+                              <li><a href="course.html">COURSES</a></li>
+                              <li><a href="projects.html">PROJECTS</a></li>
+                          </ul>
+                    </div>
+                </nav>
+            </div>
+        </div> 
+
+    <!-- Courses -->
+    <!--<section class="courses">
+        <div class="row">
+            <div class="courses-col">
+                <h3>Concurrent and Distributed Systems</h3>
+                <p>• Gained an understanding of distributed systems techniques and infrastructure (RPC, consensus, fault tolerance, consistency, scalability)</p>
+                <p>• Used Go to design and implement concurrent and distributed systems</p>
+            </div>
+            <div class="courses-col">
+                <h3>Mobile Application Development</h3>
+                <p>• Designed and implemented applications for Android devices using Java and Kotlin</p>
+                <p>• Used threading and networking for mobile applications, as well as gained an understanding of event-based models</p>
+            </div>
+            <div class="courses-col">
+                <h3>Operating Systems</h3>
+                <p>• Learned process scheduling, memory management, and file system management techniques</p>
+                <p>• Used knowledge of concurrent operations in C to implement many aspects of an Operating System</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="courses-col">
+                <h3>Comparative Programming Languages</h3>
+                <p>• Mastered basic programming language components such as variables, types, expressions, scope, and control flow in a language independent manner</p>
+                <p>• Gained an understanding of many languages/concepts such as Haskell, Lisp, and Lambda Calculus</p>
+            </div>
+            <div class="courses-col">
+                <h3>Database Concepts</h3>
+                <p>• Gained an understanding of many database concepts such as the ER model, relational data model, and relational algebra</p>
+                <p>• Created and queried databases using SQL, JavaScript, MongoDB, and Java</p>
+            </div>
+            <div class="courses-col">
+                <h3>Analysis of Algorithms</h3>
+                <p>• Learned classical algorithm design and analysis strategies</p>
+                <p>• Algorithms such as greedy algorithms, divide-and-conquer, dynamic programming, as well as graph algorithms</p>
+            </div>
+        </div>
+    </section>-->
+    <div class="courses">
+        <h2>Courses I Have Taken</h2>
+        <ul class="accordion">
+            <li>
+                <input type="radio" name="accordion" id="first" checked="false">
+                <label for="first">Introduction to Computer Science</label>
+                <div class="content">
+                    <p>• My start in Computer Science, entirely in Java.
+                        <br>• Introduced to program design and object-oriented programming.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="second" checked="false">
+                <label for="second">Computer Science I</label>
+                <div class="content">
+                    <p>• A continuation of the previous course, focusing on I/O, functions, data abstraction, and polymorphism.
+                        <br>• Learned problem analysis and solution methods, algorithm development, program
+                        design methodologies, programming constructs, methods of documentation, and good programming style.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="fourth" checked="false">
+                <label for="fourth">Computer Science II</label>
+                <div class="content">
+                    <p>• My introduction to data structures.
+                        <br>• I learned the basics of abstract data types and essential data structures such as arrays, stacks, queues, linked lists, and trees.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="fifth" checked="false">
+                <label for="fifth">Essentials of Computer Science</label>
+                <div class="content">
+                    <p>• My first CS course at George Mason University.
+                        <br>• While there was no programming, this course was all about the ethics of technology.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="sixth" checked="false">
+                <label for="sixth">Introduction to Low-Level Programming</label>
+                <div class="content">
+                    <p>• My first programming course at George Mason University.
+                        <br>• Was able to grasp the basics of C in this course such as pointers, memory allocation, and using multiple source files.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="seventh" checked="false">
+                <label for="seventh">Data Structures</label>
+                <div class="content">
+                    <p>• This course was similar to Computer Science II, which I had taken at NVCC.
+                        <br>• More focus on optimization of programs, analysis of data structures, and implementation of data structures.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="eighth" checked="false">
+                <label for="eighth">Law and Ethics</label>
+                <div class="content">
+                    <p>• This was the most different to any course I had taken in my academic career.
+                        <br>• Here, I had to examine many of the challenging legal and ethical issues surrounding computer technology and its uses, and building a foundation for dealing with those challenges.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="ninth" checked="false">
+                <label for="ninth">Software Engineering</label>
+                <div class="content">
+                    <p>• This course was my first time working on programming projects as a team.
+                        <br>• This course sought to cover all phases of the software engineering lifecycle in a realistic distributed team environment.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="tenth" checked="false">
+                <label for="tenth">Formal Methods and Models</label>
+                <div class="content">
+                    <p>• While not a programming course, this was essential for me to learn how to proof methods that are vital for algorithms.
+                        <br>• Main focus was learning to solve problems involving formal languages, such as regular expressions and regular grammar, as well
+                        as solving problems in elementary machine models, such as pushdown automata and designing finite-state automata.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="eleventh" checked="false">
+                <label for="eleventh">Concurrent and Distributed Systems</label>
+                <div class="content">
+                    <p>• Gained an understanding of distributed systems techniques and infrastructure such as RPC, consensus, fault tolerance, consistency, scalability.
+                        <br>• Used Go to design and implement concurrent and distributed systems.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="twelveth" checked="false">
+                <label for="twelveth">Mobile Application Development</label>
+                <div class="content">
+                    <p>• Designed and implemented applications for Android devices using Java and Kotlin.
+                        <br>• Used threading and networking for mobile applications, as well as gained an understanding of event-based models.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="thirteenth" checked="false">
+                <label for="thirteenth">Operating Systems</label>
+                <div class="content">
+                    <p>• Learned process scheduling, memory management, and file system management techniques.
+                        <br>• Used knowledge of concurrent operations in C to implement many aspects of an Operating System.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="fourteenth" checked="false">
+                <label for="fourteenth">Comparative Programming Languages</label>
+                <div class="content">
+                    <p>• Mastered basic programming language components such as variables, types, expressions, scope, and control flow in a language independent manner.
+                        <br>• Gained an understanding of many languages/concepts such as Haskell, Lisp, and Lambda Calculus.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="fifteenth" checked="false">
+                <label for="fifteenth">Database Concepts</label>
+                <div class="content">
+                    <p>• Gained an understanding of many database concepts such as the ER model, relational data model, and relational algebra.
+                        <br>• Created and queried databases using SQL, JavaScript, MongoDB, and Java.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="sixteenth" checked="false">
+                <label for="sixteenth">Analysis of Algorithms</label>
+                <div class="content">
+                    <p>• Learned classical algorithm design and analysis strategies.
+                        <br>• Algorithms such as greedy algorithms, divide-and-conquer, dynamic programming, as well as graph algorithms.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="seventeenth" checked="false">
+                <label for="seventeenth">Other Courses Essential to My Degree</label>
+                <div class="content">
+                    <p>     Calculus I, II, and III
+                        <br>Discrete Mathematics
+                        <br>Linear Algebra
+                        <br>Numerical Analysis
+                        <br>Systems Modeling and Simulations
+                        <br>Probability and Statistics</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Contact v2 -->
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class ="contact-left">
+                    <h1 class="sub-title">Contacts</h1>
+                    <p><i class="fa-solid fa-envelope"></i>williammelchor@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>703-420-9036</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/william-melchor-guerra-866338272/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/Resume.pdf" download class="btn btn3">Download My Resume</a>
+                </div>
+                <div class ="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for menu. These variable and functions will adjust the position of the menus -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px"
+        }
+    </script>
+    </body>
+</html>
